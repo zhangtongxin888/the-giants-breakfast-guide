@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://the-giants-breakfast.wiki
+Sitemap: https://the-giants-breakfast.wiki/sitemap.xml
