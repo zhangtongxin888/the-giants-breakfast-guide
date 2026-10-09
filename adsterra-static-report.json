@@ -1,0 +1,72 @@
+{
+  "status": "adsterra-ready",
+  "adNetwork": "adsterra",
+  "adNetworkSource": "default",
+  "releaseBlocking": false,
+  "browserAdRequestCheck": "required-after-deploy",
+  "runtime": "classic-defer",
+  "runtimeHasImport": false,
+  "visibleSlotCap": 3,
+  "enablePopunder": false,
+  "enableSocialBar": false,
+  "adsTxt": "omitted-no-platform-line",
+  "cspHosts": [
+    "https://www.highperformanceformat.com",
+    "https://*.highperformanceformat.com",
+    "https://*.effectivecpmnetwork.com"
+  ],
+  "pages": {
+    "injected": [
+      "_not-found/index.html",
+      "codes/index.html",
+      "door-code/index.html",
+      "food-rarities/index.html",
+      "how-to-play/index.html",
+      "index.html",
+      "wiki/index.html"
+    ],
+    "legalSkipped": [
+      "404/index.html",
+      "404.html",
+      "about/index.html",
+      "contact/index.html",
+      "privacy/index.html",
+      "sources/index.html",
+      "terms/index.html"
+    ],
+    "visibleSlotCounts": {
+      "404/index.html": 0,
+      "404.html": 0,
+      "_not-found/index.html": 1,
+      "about/index.html": 0,
+      "codes/index.html": 1,
+      "contact/index.html": 0,
+      "door-code/index.html": 1,
+      "food-rarities/index.html": 1,
+      "how-to-play/index.html": 1,
+      "index.html": 1,
+      "privacy/index.html": 0,
+      "sources/index.html": 0,
+      "terms/index.html": 0,
+      "wiki/index.html": 1
+    }
+  },
+  "trackedFiles": [
+    "404/index.html",
+    "404.html",
+    "_not-found/index.html",
+    "about/index.html",
+    "codes/index.html",
+    "contact/index.html",
+    "door-code/index.html",
+    "food-rarities/index.html",
+    "how-to-play/index.html",
+    "index.html",
+    "privacy/index.html",
+    "sources/index.html",
+    "terms/index.html",
+    "wiki/index.html",
+    "_headers",
+    "adsterra/runtime.js"
+  ]
+}
