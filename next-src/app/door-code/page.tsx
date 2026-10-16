@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AdPlacements } from "@/components/ad-placements";
 import { checkedDateLabel, doorCodeAnswer } from "@/lib/game-data";
 
 export const metadata: Metadata = {
@@ -66,6 +67,7 @@ export default function DoorCodePage() {
           <Link className="btn-secondary" href="/">Back to wiki home</Link>
         </div>
       </section>
+      <AdPlacements />
     </>
   );
 }

@@ -1,23 +1,19 @@
 {
   "status": "adsterra-ready",
   "adNetwork": "adsterra",
-  "adNetworkSource": "default",
-  "releaseBlocking": false,
-  "browserAdRequestCheck": "required-after-deploy",
-  "runtime": "classic-defer",
-  "runtimeHasImport": false,
+  "formats": [
+    "banner",
+    "native"
+  ],
+  "runtime": "classic-defer-post-hydration",
   "visibleSlotCap": 3,
   "enablePopunder": false,
   "enableSocialBar": false,
-  "adsTxt": "omitted-no-platform-line",
-  "cspHosts": [
-    "https://www.highperformanceformat.com",
-    "https://*.highperformanceformat.com",
-    "https://*.effectivecpmnetwork.com"
-  ],
+  "contentFirst": true,
+  "csp": "scheme-https-no-host-allowlist",
+  "cspHosts": [],
   "pages": {
     "injected": [
-      "_not-found/index.html",
       "codes/index.html",
       "door-code/index.html",
       "food-rarities/index.html",
@@ -28,6 +24,7 @@
     "legalSkipped": [
       "404/index.html",
       "404.html",
+      "_not-found/index.html",
       "about/index.html",
       "contact/index.html",
       "privacy/index.html",
@@ -37,36 +34,18 @@
     "visibleSlotCounts": {
       "404/index.html": 0,
       "404.html": 0,
-      "_not-found/index.html": 1,
+      "_not-found/index.html": 0,
       "about/index.html": 0,
-      "codes/index.html": 1,
+      "codes/index.html": 3,
       "contact/index.html": 0,
-      "door-code/index.html": 1,
-      "food-rarities/index.html": 1,
-      "how-to-play/index.html": 1,
-      "index.html": 1,
+      "door-code/index.html": 3,
+      "food-rarities/index.html": 3,
+      "how-to-play/index.html": 3,
+      "index.html": 3,
       "privacy/index.html": 0,
       "sources/index.html": 0,
       "terms/index.html": 0,
-      "wiki/index.html": 1
+      "wiki/index.html": 3
     }
-  },
-  "trackedFiles": [
-    "404/index.html",
-    "404.html",
-    "_not-found/index.html",
-    "about/index.html",
-    "codes/index.html",
-    "contact/index.html",
-    "door-code/index.html",
-    "food-rarities/index.html",
-    "how-to-play/index.html",
-    "index.html",
-    "privacy/index.html",
-    "sources/index.html",
-    "terms/index.html",
-    "wiki/index.html",
-    "_headers",
-    "adsterra/runtime.js"
-  ]
+  }
 }

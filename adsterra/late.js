@@ -1,42 +1,96 @@
-/* Adsterra late placer for prebuilt Next exports (no source in repo).
-   The 2026-10-08 backfill injected <aside data-ad-slot> into out/*.html; React hydration
-   (#418) then wiped them. Markers are now created here AFTER hydration, then runtime.js runs.
-   Banner/Native only. Legal pages stay clean. */
+/* Recreate Banner + Native hosts after Next hydration.
+   Static asides inside <main> are wiped by React (#418). Script tags stay in the
+   exported HTML (inert, inside <template>); this file mounts at most 3 live slots
+   after load. Legal pages are left untouched. */
 (function () {
   "use strict";
-  var CLEAN = /(^|\/)(about|accessibility|advertising-policy|affiliate-disclosure|contact|cookie-policy|cookies|disclosure|dmca|editorial-policy|legal|privacy|sources|terms|404)(\/|$|\.html)/i;
-  var runs = 0;
-  function ids() {
-    try { return JSON.parse(document.getElementById("adsterra-config").textContent).slots.map(function (s) { return s.id; }); }
-    catch (e) { return []; }
+
+  var CLEAN = /(^|\/)(about|accessibility|advertising-policy|affiliate-disclosure|contact|cookie-policy|cookies|disclosure|dmca|editorial-policy|legal|privacy|sources|terms|404|_not-found)(\/|$|\.html)/i;
+  var SLOT_IDS = ["native", "leaderboard", "rectangle"];
+
+  function clean() {
+    return CLEAN.test(String(window.location.pathname || ""));
   }
-  function mk(id) {
-    var a = document.createElement("aside");
-    a.className = "ad-placement";
-    a.setAttribute("data-ad-slot", id);
-    a.setAttribute("aria-label", "Advertisement");
-    a.innerHTML = '<span class="ad-label">Advertisement</span><div class="ad-host" data-ad-host="' + id + '"></div>';
-    return a;
+
+  function readConfig() {
+    var node = document.getElementById("adsterra-config");
+    if (!node) return null;
+    try {
+      return JSON.parse(node.textContent || "");
+    } catch {
+      return null;
+    }
   }
-  function place() {
-    if (CLEAN.test(location.pathname)) return;
-    if (document.querySelector("[data-ad-slot]")) return;
-    var list = ids(); if (!list.length) return;
-    var main = document.querySelector("main") || document.body;
-    list.forEach(function (id) {
-      var el = mk(id);
-      if (id === "top") main.insertBefore(el, main.firstChild);
-      else if (id === "mid") {
-        var s = main.querySelector("section");
-        if (s && s.parentNode) s.parentNode.insertBefore(el, s.nextSibling); else main.appendChild(el);
-      } else main.appendChild(el);
-    });
-    var sc = document.createElement("script");
-    sc.src = "/adsterra/runtime.js" + (runs++ ? "?r=" + runs : "");
-    document.body.appendChild(sc);
+
+  var stored = readConfig();
+  if (stored && stored.adNetwork === "adsterra") window.__adsterraConfig = stored;
+
+  function removeOrphan() {
+    var orphan = document.querySelector("#adsterra-mount[data-adsterra-orphan='1']");
+    if (orphan) orphan.remove();
   }
-  function later() { setTimeout(place, 1200); }
-  if (document.readyState === "complete") later(); else window.addEventListener("load", later);
-  var last = location.pathname;
-  setInterval(function () { if (location.pathname !== last) { last = location.pathname; later(); } }, 800);
+
+  function ensureMount() {
+    if (clean()) {
+      removeOrphan();
+      return null;
+    }
+    var mount = document.getElementById("adsterra-mount");
+    if (!mount) {
+      mount = document.createElement("div");
+      mount.id = "adsterra-mount";
+      mount.setAttribute("data-adsterra-mount", "1");
+      mount.setAttribute("data-adsterra-orphan", "1");
+      for (var i = 0; i < SLOT_IDS.length; i += 1) {
+        var id = SLOT_IDS[i];
+        var aside = document.createElement("aside");
+        aside.className = "ad-placement";
+        aside.setAttribute("data-ad-slot", id);
+        aside.setAttribute("aria-label", "Advertisement");
+        aside.innerHTML = '<span class="ad-label">Advertisement</span><div class="ad-host" data-ad-host="' + id + '"></div>';
+        mount.appendChild(aside);
+      }
+      var main = document.querySelector("main");
+      if (main) main.appendChild(mount);
+      else document.body.appendChild(mount);
+    }
+    var live = document.querySelectorAll("aside.ad-placement");
+    for (var extra = 3; extra < live.length; extra += 1) live[extra].remove();
+    return mount;
+  }
+
+  function activate() {
+    if (clean()) return;
+    if (window.__adsterraConfig) {
+      /* already captured */
+    } else if (stored) {
+      window.__adsterraConfig = stored;
+    }
+    if (typeof window.__adsterraMount === "function") {
+      window.__adsterraMount();
+      return;
+    }
+    if (document.getElementById("adsterra-runtime")) return;
+    var script = document.createElement("script");
+    script.id = "adsterra-runtime";
+    script.src = "/adsterra/runtime.js";
+    document.body.appendChild(script);
+  }
+
+  function tick() {
+    if (clean()) {
+      removeOrphan();
+      return;
+    }
+    ensureMount();
+    activate();
+  }
+
+  function start() {
+    tick();
+    window.setInterval(tick, 1500);
+  }
+
+  if (document.readyState === "complete") window.setTimeout(start, 1200);
+  else window.addEventListener("load", function () { window.setTimeout(start, 1200); });
 })();

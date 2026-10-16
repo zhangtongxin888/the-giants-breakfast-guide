@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AdPlacements } from "@/components/ad-placements";
 
 export const metadata: Metadata = {
   title: "Player Wiki",
@@ -31,6 +32,7 @@ export default function WikiPage() {
           </article>
         ))}
       </section>
+      <AdPlacements />
     </>
   );
 }
