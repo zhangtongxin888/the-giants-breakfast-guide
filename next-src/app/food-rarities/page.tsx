@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AdPlacements } from "@/components/ad-placements";
 import { checkedDateLabel } from "@/lib/game-data";
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function FoodRaritiesPage() {
           <p className="note">See <Link href="/how-to-play/">how to play</Link> for the stacking loop that unlocks rarer food.</p>
         </article>
       </section>
+      <AdPlacements />
     </>
   );
 }

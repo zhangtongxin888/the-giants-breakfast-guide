@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AdPlacements } from "@/components/ad-placements";
 import { checkedDateLabel } from "@/lib/game-data";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function CodesPage() {
         <h2>Looking for the door code instead?</h2>
         <p>Many “code” searches mean the in-world lab/door keypad. That answer lives on the dedicated <Link href="/door-code/">door code page</Link> (community-reported <strong>EGGS</strong>), not in a promo list.</p>
       </section>
+      <AdPlacements />
     </>
   );
 }

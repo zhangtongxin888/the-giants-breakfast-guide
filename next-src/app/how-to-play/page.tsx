@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AdPlacements } from "@/components/ad-placements";
 import { checkedDateLabel, officialGameUrl, playSteps } from "@/lib/game-data";
 
 export const metadata: Metadata = {
@@ -45,6 +46,7 @@ export default function HowToPlayPage() {
         </ul>
         <p className="note">Use the live Roblox UI as the authority for numbers. For rarity status, see <Link href="/food-rarities/">food rarities</Link>.</p>
       </section>
+      <AdPlacements />
     </>
   );
 }

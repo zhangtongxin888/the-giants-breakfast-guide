@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AdPlacements } from "@/components/ad-placements";
 import { checkedDateLabel, doorCodeAnswer, faqs, officialGameUrl, playSteps } from "@/lib/game-data";
 
 export const metadata: Metadata = {
@@ -75,6 +76,7 @@ export default function HomePage() {
           </div>
         ))}
       </section>
+      <AdPlacements />
     </>
   );
 }
