@@ -1,12 +1,21 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { AdPlacements } from "@/components/ad-placements";
-import { checkedDateLabel, doorCodeAnswer, faqs, officialGameUrl, playSteps } from "@/lib/game-data";
+import {
+  checkedDateLabel,
+  doorCodeAnswer,
+  faqs,
+  homeFreshnessNote,
+  officialGameUrl,
+  playSteps,
+} from "@/lib/game-data";
 
 export const metadata: Metadata = {
-  title: "The Giant's Breakfast Wiki & Beginner Guide",
+  title: {
+    absolute: "The Giant's Breakfast Wiki: Door Code, Codes & Guide (Oct 2026)",
+  },
   description:
-    "Stack breakfast to the sky: official loop, door/lab keypad answer, Celestial rarity status, and honest code checks for The Giant's Breakfast on Roblox.",
+    "October 2026 guide: the door/lab keypad answer (EGGS), official cooking loop, Celestial rarity, and verified code status for The Giant's Breakfast on Roblox.",
   alternates: { canonical: "/" },
 };
 
@@ -38,14 +47,15 @@ export default function HomePage() {
         <h1>Stack breakfast to the sky.</h1>
         <p className="lede">
           Pull the lever. Cook giant food. Build a tower that earns every second—then climb toward rarer finds all the way to Celestial.
-          Need the lab keypad? Start with the door-code answer, then follow the six-step loop.
+          Searching <strong>the giants breakfast roblox door code</strong>? Start with the keypad answer below, then follow the six-step loop.
         </p>
         <div className="actions">
           <Link className="btn" href="/door-code/">Door code: {doorCodeAnswer.code}</Link>
           <Link className="btn-secondary" href="/how-to-play/">How to play guide</Link>
+          <Link className="btn-secondary" href="/updates/">October updates</Link>
           <a className="btn-secondary" href={officialGameUrl} target="_blank" rel="noreferrer">Official game</a>
         </div>
-        <p className="note">Checked {checkedDateLabel}. Homepage no longer tries to answer every query alone—door-code and how-to-play now have dedicated owners.</p>
+        <p className="note">{homeFreshnessNote}</p>
       </section>
 
       <div className="grid-2" style={{ marginTop: 18 }}>
@@ -75,7 +85,13 @@ export default function HomePage() {
             <p className="note" style={{ margin: 0 }}>{item.answer}</p>
           </div>
         ))}
+        <p className="note" style={{ marginTop: 12 }}>
+          Next steps: <Link href="/door-code/">door code</Link> · <Link href="/codes/">codes status</Link> ·{" "}
+          <Link href="/food-rarities/">food rarities</Link> · <Link href="/updates/">updates log</Link> ·{" "}
+          <Link href="/sources/">sources</Link>
+        </p>
       </section>
+      <p className="note" style={{ marginTop: 8 }}>Checked {checkedDateLabel}.</p>
       <AdPlacements />
     </>
   );

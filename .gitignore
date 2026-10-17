@@ -1,3 +1,4 @@
-node_modules/
 .next/
+next-src/node_modules/
+node_modules/
 out/

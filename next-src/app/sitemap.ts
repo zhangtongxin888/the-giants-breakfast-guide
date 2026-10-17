@@ -9,6 +9,7 @@ const routes = [
   "/door-code/",
   "/food-rarities/",
   "/codes/",
+  "/updates/",
   "/wiki/",
   "/about/",
   "/sources/",
@@ -18,11 +19,21 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-09-22T10:00:00+08:00");
+  const lastModified = new Date("2026-10-17T12:00:00-04:00");
   return routes.map((route) => ({
     url: `${siteDomain}${route}`,
     lastModified,
-    changeFrequency: route === "/" || route === "/door-code/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1 : route === "/door-code/" || route === "/how-to-play/" ? 0.9 : 0.6,
+    changeFrequency:
+      route === "/" || route === "/door-code/" || route === "/updates/" || route === "/codes/"
+        ? "weekly"
+        : "monthly",
+    priority:
+      route === "/"
+        ? 1
+        : route === "/door-code/" || route === "/how-to-play/"
+          ? 0.9
+          : route === "/updates/" || route === "/codes/"
+            ? 0.8
+            : 0.6,
   }));
 }

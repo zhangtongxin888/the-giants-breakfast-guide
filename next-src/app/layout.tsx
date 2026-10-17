@@ -6,11 +6,11 @@ import { siteDomain } from "@/lib/game-data";
 export const metadata: Metadata = {
   metadataBase: new URL(siteDomain),
   title: {
-    default: "The Giant's Breakfast Wiki & Beginner Guide",
+    default: "The Giant's Breakfast Wiki: Door Code, Codes & Guide (Oct 2026)",
     template: "%s | The Giant's Breakfast Wiki",
   },
   description:
-    "Learn the official cooking and stacking loop, door/lab keypad answer, food rarity status, and verified facts for The Giant's Breakfast on Roblox.",
+    "October 2026 guide: door/lab keypad answer (EGGS), official cooking loop, Celestial rarity, and verified code status for The Giant's Breakfast on Roblox.",
   alternates: { canonical: "/" },
   icons: { icon: "/game/official-icon.png", apple: "/game/official-icon.png" },
   openGraph: {

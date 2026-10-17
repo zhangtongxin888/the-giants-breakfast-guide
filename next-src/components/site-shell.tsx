@@ -40,6 +40,7 @@ export function SiteFooter() {
           <Link href="/door-code/">Door code</Link>
           <Link href="/food-rarities/">Food rarities</Link>
           <Link href="/codes/">Codes</Link>
+          <Link href="/updates/">Updates</Link>
           <Link href="/wiki/">Wiki</Link>
           <Link href="/sources/">Sources</Link>
           <Link href="/about/">About</Link>

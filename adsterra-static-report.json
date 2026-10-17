@@ -19,6 +19,7 @@
       "food-rarities/index.html",
       "how-to-play/index.html",
       "index.html",
+      "updates/index.html",
       "wiki/index.html"
     ],
     "legalSkipped": [
@@ -45,6 +46,7 @@
       "privacy/index.html": 0,
       "sources/index.html": 0,
       "terms/index.html": 0,
+      "updates/index.html": 3,
       "wiki/index.html": 3
     }
   }

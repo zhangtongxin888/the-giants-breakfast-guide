@@ -22,6 +22,7 @@ export default function HowToPlayPage() {
         <div className="actions">
           <a className="btn" href={officialGameUrl} target="_blank" rel="noreferrer">Play the official game</a>
           <Link className="btn-secondary" href="/door-code/">Need the door code?</Link>
+          <Link className="btn-secondary" href="/updates/">October updates</Link>
         </div>
       </section>
 
@@ -44,7 +45,10 @@ export default function HowToPlayPage() {
           <li>A complete public food ladder below Celestial</li>
           <li>Event calendars or offline reward amounts</li>
         </ul>
-        <p className="note">Use the live Roblox UI as the authority for numbers. For rarity status, see <Link href="/food-rarities/">food rarities</Link>.</p>
+        <p className="note">
+          Use the live Roblox UI as the authority for numbers. For rarity status, see <Link href="/food-rarities/">food rarities</Link>.
+          Stuck on a keypad? Open the <Link href="/door-code/">door code guide</Link>. Promo gifts (if any) stay on <Link href="/codes/">codes status</Link>.
+        </p>
       </section>
       <AdPlacements />
     </>

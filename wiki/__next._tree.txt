@@ -1,3 +1,3 @@
-:HL["/_next/static/chunks/1570ln~_dnimp.css","style"]
+:HL["/_next/static/chunks/01i3zph6l921i.css","style"]
 :HL["/game/official-icon.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"wiki","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"2lANIVJgpwjDmQ71GrmCh"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"wiki","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Dm99Qh3o18MP64zqkcbC4"}

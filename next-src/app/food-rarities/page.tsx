@@ -30,7 +30,10 @@ export default function FoodRaritiesPage() {
             <li>Numeric drop rates or pity rules</li>
             <li>Guaranteed unlock heights for each tier</li>
           </ul>
-          <p className="note">See <Link href="/how-to-play/">how to play</Link> for the stacking loop that unlocks rarer food.</p>
+          <p className="note">
+            See <Link href="/how-to-play/">how to play</Link> for the stacking loop that unlocks rarer food.
+            After mid-October live touches, soft-rejoin and re-check station feel—see <Link href="/updates/">updates</Link>.
+          </p>
         </article>
       </section>
       <AdPlacements />

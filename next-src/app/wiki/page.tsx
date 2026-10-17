@@ -4,15 +4,16 @@ import { AdPlacements } from "@/components/ad-placements";
 
 export const metadata: Metadata = {
   title: "Player Wiki",
-  description: "The Giant's Breakfast player wiki hub: how to play, door code, food rarities, and codes status.",
+  description: "The Giant's Breakfast player wiki hub: how to play, door code, food rarities, codes status, and October updates.",
   alternates: { canonical: "/wiki/" },
 };
 
 const sections = [
   ["How to play", "/how-to-play/", "The confirmed six-step path from buying food to offline earnings."],
-  ["Door code", "/door-code/", "Community-reported lab/door keypad answer and safe entry steps."],
+  ["Door code", "/door-code/", "Community-reported lab/door keypad answer (EGGS), FAQ, and safe entry steps."],
   ["Food rarities", "/food-rarities/", "Celestial endpoint and details still not public."],
   ["Codes status", "/codes/", "Why this guide does not invent an active promo list."],
+  ["October updates", "/updates/", "Monthly log: live-update awareness, keypad recheck, promo status."],
 ] as const;
 
 export default function WikiPage() {

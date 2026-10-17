@@ -1,9 +1,10 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { checkedDateLabel, sources } from "@/lib/game-data";
 
 export const metadata: Metadata = {
   title: "Sources",
-  description: "Source notes for The Giant's Breakfast wiki claims.",
+  description: "Source notes for The Giant's Breakfast wiki claims, including door-code and promo status checks.",
   alternates: { canonical: "/sources/" },
 };
 
@@ -25,7 +26,10 @@ export default function SourcesPage() {
           </li>
         ))}
       </ul>
-      <p className="note">Door-code keypad answer is labeled community-reported on its owner page and is not presented as an official Zidiam gift string.</p>
+      <p className="note">
+        Door-code keypad answer is labeled community-reported on its <Link href="/door-code/">owner page</Link> and is not presented as an official Zidiam gift string.
+        Editorial log: <Link href="/updates/">October 2026 updates</Link>.
+      </p>
     </section>
   );
 }
