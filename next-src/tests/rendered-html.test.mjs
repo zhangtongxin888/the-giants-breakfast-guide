@@ -54,7 +54,7 @@ test("sitemap and nav include door-code, updates, and owners", async () => {
   assert.match(shell, /\/door-code\//);
   assert.match(data, /the-giants-breakfast\.wiki/);
   assert.match(data, /\["Updates", "\/updates\/"\]/);
-  assert.match(data, /October 17, 2026/);
+  assert.match(data, /October 25, 2026/);
 });
 
 test("codes page keeps empty promo honesty and FAQ", async () => {

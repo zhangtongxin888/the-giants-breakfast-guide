@@ -3,7 +3,7 @@ export const officialGameUrl =
   "https://www.roblox.com/games/100235161195378/The-Giants-Breakfast";
 export const officialUniverseId = "10514182487";
 export const creatorName = "Zidiam Studios";
-export const checkedDateLabel = "October 17, 2026";
+export const checkedDateLabel = "October 25, 2026";
 
 export const navItems = [
   ["How to play", "/how-to-play/"],
@@ -15,7 +15,7 @@ export const navItems = [
 ] as const;
 
 export const homeFreshnessNote =
-  "Checked October 17, 2026. Independent trackers still list EGGS for the lab/door keypad; platform update activity continued into mid-October (thumbnail change Oct 8; update days through Oct 14). Zidiam has still not published a verified promo gift list.";
+  "Checked October 25, 2026. Independent trackers still list EGGS for the lab/door keypad; the Roblox API shows another live update on Oct 24 (after mid-October update days and an Oct 8 thumbnail change). Zidiam has still not published a verified promo gift list.";
 
 export const playSteps = [
   {
@@ -109,6 +109,11 @@ export const faqs = [
       "On the in-world keypad, terminal, chalkboard, or task field near the clue—inside the Roblox experience. Do not paste it into third-party redeem websites.",
   },
   {
+    question: "How do you get Celestials in The Giant's Breakfast?",
+    answer:
+      "Keep growing your tower. The official description says bigger stacks find rarer food up to the Celestial tier, so Celestial food comes from the same lever after your stack is tall enough. It still cooks on the normal station: batters, eggs and meat on the griddle, bread and pastries in the toaster. Exact unlock heights and odds are not published.",
+  },
+  {
     question: "What is the rarest food tier?",
     answer:
       "Celestial is the highest rarity named in the official Roblox description. The full ordered ladder and drop rates are not published there.",
@@ -157,6 +162,13 @@ export const codesFaqs = [
 ] as const;
 
 export const octoberUpdateNotes = [
+  {
+    date: "2026-10-25",
+    title: "Editorial recheck — Oct 24 live update, codes unchanged",
+    detail:
+      "The official Roblox games API shows the experience was updated on Oct 24, 2026 (about 3.28M visits, ~35 concurrent players when checked). No patch notes were published in the sources reviewed, so no mechanics bullets are invented. The JP codes tracker still lists 0 active promo codes; the puzzle tracker still lists EGGS for the keypad.",
+    playerAction: "Rejoin a fresh server, then re-check the keypad and your station sorting. Chasing Celestial? See /food-rarities/.",
+  },
   {
     date: "2026-10-17",
     title: "Editorial recheck — door code & promo status",
@@ -207,6 +219,11 @@ export const sources = [
     label: "Independent JP codes tracker (promo count)",
     url: "https://www.roburo.jp/games/100235161195378/the-giants-breakfast/",
     note: "Lists active promo codes as 0 for this experience during the Oct 2026 recheck window.",
+  },
+  {
+    label: "Independent fan guide — Celestial food",
+    url: "https://thegiantsbreakfast.wiki/guides/celestial-food/",
+    note: "Celestial is a late rarity unlocked by tower/income progress; same griddle/toaster sorting; no published unlock numbers.",
   },
   {
     label: "Independent live-stats / update cadence (RoStats)",

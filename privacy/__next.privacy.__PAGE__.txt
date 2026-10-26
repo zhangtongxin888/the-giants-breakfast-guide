@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[97367,["/_next/static/chunks/13h-0fd.p-1ga.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
 3:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"panel","children":[["$","h1",null,{"children":"Privacy"}],["$","p",null,{"children":"This fan guide does not require accounts. If advertising is enabled on a live deployment, third-party ad networks may process technical data under their own policies."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Dm99Qh3o18MP64zqkcbC4"}
+0:{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"panel","children":[["$","h1",null,{"children":"Privacy"}],["$","p",null,{"children":"This fan guide does not require accounts. If advertising is enabled on a live deployment, third-party ad networks may process technical data under their own policies."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"CppKRuFjC6KSiCSemjtc0"}
 4:null

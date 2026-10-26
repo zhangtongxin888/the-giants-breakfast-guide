@@ -30,7 +30,7 @@ export default function UpdatesPage() {
       <section className="panel" style={{ marginTop: 18 }}>
         <h2>What changed for players (verified scope)</h2>
         <ul>
-          <li><strong>Door / lab keypad:</strong> still community-reported <strong>EGGS</strong> after the Oct 17 recheck.</li>
+          <li><strong>Door / lab keypad:</strong> still community-reported <strong>EGGS</strong> after the Oct 25 recheck.</li>
           <li><strong>Promo gifts:</strong> still no verified active list on the sources reviewed.</li>
           <li><strong>Live ops:</strong> independent stats tracking shows frequent mid-October update days (through Oct 14) and a thumbnail look change on Oct 8—not a license to invent mechanics bullets.</li>
         </ul>
