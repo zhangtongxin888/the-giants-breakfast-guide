@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteDomain),
   title: {
     default: "The Giant's Breakfast Wiki: Door Code, Codes & Guide (Oct 2026)",
-    template: "%s | The Giant's Breakfast Wiki",
+    template: "%s | The Giant's Breakfast Roblox Guide",
   },
   description:
     "October 2026 guide: door/lab keypad answer (EGGS), official cooking loop, Celestial rarity, and verified code status for The Giant's Breakfast on Roblox.",

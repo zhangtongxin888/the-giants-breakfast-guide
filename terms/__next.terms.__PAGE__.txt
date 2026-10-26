@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[97367,["/_next/static/chunks/13h-0fd.p-1ga.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
 3:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"panel","children":[["$","h1",null,{"children":"Terms"}],["$","p",null,{"children":"Unofficial fan information only. Roblox® is a trademark of Roblox Corporation. Game content belongs to its creators. Use at your own risk; pre-release or live game behavior can change."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"CppKRuFjC6KSiCSemjtc0"}
+0:{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"panel","children":[["$","h1",null,{"children":"Terms"}],["$","p",null,{"children":"Unofficial fan information only. Roblox® is a trademark of Roblox Corporation. Game content belongs to its creators. Use at your own risk; pre-release or live game behavior can change."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Gy6uY9LcvISvaPDWDqz4v"}
 4:null

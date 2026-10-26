@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { AdPlacements } from "@/components/ad-placements";
 
 export const metadata: Metadata = {
-  title: "Player Wiki",
+  title: "Player Guide Hub",
   description: "The Giant's Breakfast player wiki hub: how to play, door code, food rarities, codes status, and October updates.",
   alternates: { canonical: "/wiki/" },
 };
