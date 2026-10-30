@@ -65,4 +65,6 @@ function walk(dir) {
 walk(out);
 rts.add("/adsterra/runtime.js");
 for (const r of rts) { const f = path.join(out, r); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, runtime); }
+{ const lj = path.join(out, "adsterra", "late.js"), lp = path.join(here, "adsterra-late-popsb.js");
+  if (fs.existsSync(lj) && fs.existsSync(lp)) fs.copyFileSync(lp, lj); }
 console.log(`adsterra-popsb: pages=${pages} socialBar=${sb} removedAdBlocks=${removed} runtimes=${[...rts].join(",")}`);
